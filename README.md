@@ -1,2 +1,6 @@
 # ExtendedBlocksConverter
 Converts any PocketMine-MP 3.0 extended blocks into PM4 native blocks!
+
+Yes, you heard right, this plugin can convert any leftovers extended blocks from PM3 and convert it into the new PM4 blocks  without leaving update blocks behind!
+
+In order for this plugin to work first don't load any chunks that contains old extended blocks before adding this plugin. Once you have added this plugin load every chunk that you wish to convert the old extended blocks. Easy as that!
