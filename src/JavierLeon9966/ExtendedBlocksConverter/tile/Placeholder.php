@@ -8,6 +8,7 @@ use pocketmine\block\tile\Tile;
 use pocketmine\block\{Block, BlockFactory, VanillaBlocks};
 use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\world\format\io\GlobalBlockStateHandlers;
 use pocketmine\world\World;
 
 class Placeholder extends Tile{
@@ -21,7 +22,7 @@ class Placeholder extends Tile{
 	public function readSaveData(CompoundTag $nbt): void{
 		$blockTag = $nbt->getCompoundTag('Block');
 		if($blockTag !== null){
-			$this->block = BlockFactory::getInstance()->get($blockTag->getShort('id'), $blockTag->getByte('meta'));
+            $this->block = BlockFactory::getInstance()->fromStateId(GlobalBlockStateHandlers::getDeserializer()->deserialize(GlobalBlockStateHandlers::getUpgrader()->upgradeIntIdMeta($blockTag->getShort('id'), $blockTag->getByte('meta'))));
 		}
 	}
 
