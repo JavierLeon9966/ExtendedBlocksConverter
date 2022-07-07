@@ -2,7 +2,7 @@ name: ExtendedBlocksConverter
 main: JavierLeon9966\ExtendedBlocksConverter\Main
 author: JavierLeon9966
 version: 1.0.0
-api: 4.0.0
+api: 5.0.0
 load: STARTUP
-description: Converts any PM3 extended blocks into PM4 blocks!
+description: Converts any PM3 extended blocks into PM4/PM5 blocks!
 website: https://github.com/JavierLeon9966/ExtendedBlocksConverter

@@ -12,11 +12,12 @@ use pocketmine\event\world\ChunkLoadEvent;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener{
-	public function onLoad(): void{
+
+	protected function onLoad(): void{
 		TileFactory::getInstance()->register(Placeholder::class);
 	}
 
-	public function onEnable(): void{
+	protected function onEnable(): void{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
