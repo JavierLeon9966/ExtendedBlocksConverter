@@ -4,5 +4,5 @@ author: JavierLeon9966
 version: 1.0.0
 api: 5.0.0
 load: STARTUP
-description: Converts any PM3 extended blocks into PM4/PM5 blocks!
+description: Converts any PM3 extended blocks into the latest blocks!
 website: https://github.com/JavierLeon9966/ExtendedBlocksConverter

@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace JavierLeon9966\ExtendedBlocksConverter\tile;
 
 use pocketmine\block\tile\Tile;
-use pocketmine\block\{Block, BlockFactory, VanillaBlocks};
+use pocketmine\block\{Block, VanillaBlocks};
 use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\world\format\io\GlobalBlockStateHandlers;
@@ -22,7 +22,7 @@ class Placeholder extends Tile{
 	public function readSaveData(CompoundTag $nbt): void{
 		$blockTag = $nbt->getCompoundTag('Block');
 		if($blockTag !== null){
-            $this->block = BlockFactory::getInstance()->fromStateId(GlobalBlockStateHandlers::getDeserializer()->deserialize(GlobalBlockStateHandlers::getUpgrader()->upgradeIntIdMeta($blockTag->getShort('id'), $blockTag->getByte('meta'))));
+            $this->block = GlobalBlockStateHandlers::getDeserializer()->deserializeBlock(GlobalBlockStateHandlers::getUpgrader()->upgradeIntIdMeta($blockTag->getShort('id'), $blockTag->getByte('meta')));
 		}
 	}
 
