@@ -1,7 +1,7 @@
 name: ExtendedBlocksConverter
 main: JavierLeon9966\ExtendedBlocksConverter\Main
 author: JavierLeon9966
-version: 1.0.0
+version: 1.1.0
 api: 5.0.0
 load: STARTUP
 description: Converts any PM3 extended blocks into the latest blocks!
