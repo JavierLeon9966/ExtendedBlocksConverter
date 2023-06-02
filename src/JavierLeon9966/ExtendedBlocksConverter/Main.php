@@ -31,7 +31,7 @@ class Main extends PluginBase implements Listener{
 				continue;
 			}
 			$pos = $tile->getPosition();
-			$world->setBlockAt($pos->x, $pos->y, $pos->z, $tile->getExtendedBlock(), false);
+			$world->setBlockAt($pos->getFloorX(), $pos->getFloorY(), $pos->getFloorZ(), $tile->getExtendedBlock(), false);
 			$tile->close();
 		}
 	}
